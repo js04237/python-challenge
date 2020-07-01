@@ -22,12 +22,15 @@ with open(datapath) as datafile:
     next(datareader)
     for row in datareader:
         # Find the start date and the end date
-        Date = (datetime.datetime.strptime(row[0], '%b-%y').date())
+        Date = datetime.datetime.strptime(row[0], '%b-%Y').date()
         if Date < MinDate:
             MinDate = Date
         if Date > MaxDate:
             MaxDate = Date
-
+        # print(Date)
+    # print(row)
+    
+# Get the number of months between the start and stop dates
 # Formula from https://kite.com/python/answers/how-to-get-the-number-of-months-between-two-dates-in-python
 num_months = (MaxDate.year - MinDate.year) * 12 + (MaxDate.month - MinDate.month)
 print(num_months)
