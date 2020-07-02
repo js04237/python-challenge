@@ -75,7 +75,7 @@ print(f'Greatest Increase in Profits: {MaxProfitDate} (${MaxProfit})')
 # Print Min Profit
 print(f'Greatest Decrease in Profits: {MinProfitDate} (${MinProfit})')
 
-# Open the file using "write" mode. Specify the variable to hold the contents
+# Open the file using "write" mode. '\n' makes each write happen on a new line
 file = open(output_path, 'w')
 
 file.write('Financial Analysis')
